@@ -1,59 +1,50 @@
 import asyncio
 import logging
 import sys
-import time
-from urllib.parse import urlencode
-
+import os
 from aiogram import Bot, Dispatcher, F
+from aiogram.client.default import DefaultBotProperties
 from aiogram.enums import ParseMode
-from aiogram.filters import CommandStart
-from aiogram.types import Message
+from aiogram.types import Message, LabeledPrice, PreCheckoutQuery
+import requests
 
-# Токен твоего Telegram-бота
-TOKEN = '8195156027:AAFmGf_dltQ9ETpswU3U4UTuWv8eRPS16fU'
+# Получаем токен из переменных окружения
+TOKEN = os.getenv("BOT_TOKEN")
+YOOMONEY_WALLET = "4100118178122985"  # Укажи свой YooMoney кошелек
+YOOMONEY_API_KEY = os.getenv("JBv8vNP6BqehGUYQuF2tTelW")  # Ключ API YooMoney
 
-# Настройки YooMoney
-YOOMONEY_RECEIVER = "4100118178122985"  # номер кошелька или идентификатор
-YOOMONEY_BASE_URL = "https://yoomoney.ru/quickpay/confirm.xml"
-PAYMENT_SUM = 200  # сумма платежа (можно менять по необходимости)
-
-# Инициализация бота и диспетчера
 bot = Bot(token=TOKEN, default=DefaultBotProperties(parse_mode=ParseMode.HTML))
 dp = Dispatcher()
+CURRENCY = "XTR"
 
-def generate_payment_link(chat_id: int, sum_value: int) -> str:
-    """
-    Формирует ссылку для оплаты через YooMoney с уникальным параметром label.
-    Для уникальности label используется комбинация chat_id и текущей временной метки.
-    """
-    unique_label = f"{chat_id}_{int(time.time())}"
-    params = {
-        "receiver": YOOMONEY_RECEIVER,
-        "quickpay-form": "shop",
-        "targets": "Подписка",  # описание платежа
-        "paymentType": "SB",     # способ оплаты (можно изменить, если нужно)
-        "sum": sum_value,
-        "label": unique_label
-    }
-    return f"{YOOMONEY_BASE_URL}?{urlencode(params)}"
-
-@dp.message(CommandStart())
-async def command_start_handler(message: Message) -> None:
-    """
-    При команде /start бот генерирует ссылку на оплату через YooMoney.
-    В ссылке в параметре label содержится уникальный идентификатор, включающий chat_id пользователя.
-    """
-    chat_id = message.chat.id
-    payment_link = generate_payment_link(chat_id, PAYMENT_SUM)
-    text = (
-        "Чтобы активировать подписку, перейдите по следующей ссылке для оплаты:\n"
-        f"<a href='{payment_link}'>Оплатить подписку</a>\n\n"
-        "После оплаты вы получите уведомление в боте."
+# Telegram Stars (как у тебя было раньше)
+@dp.message(F.text == "/pay_stars")
+async def pay_with_stars(message: Message):
+    await message.answer_invoice(
+        title="Подписка на 30 дней",
+        description="Оплатить и получить ссылку",
+        payload="access_to_private",
+        currency="XTR",
+        prices=[LabeledPrice(label="XTR", amount=350)]
     )
-    await message.answer(text, disable_web_page_preview=True)
 
-async def main() -> None:
-    # Запускаем бота
+@dp.pre_checkout_query()
+async def pre_checkout_handler(event: PreCheckoutQuery):
+    await event.answer(True)
+
+@dp.message(F.successful_payment)
+async def successful_payment(message: Message):
+    link = await bot.create_chat_invite_link(-1002291268265, member_limit=1)
+    await message.answer(f"Твоя ссылка:\n{link.invite_link}")
+
+# YooMoney (новая функция)
+@dp.message(F.text == "/pay_yoomoney")
+async def pay_with_yoomoney(message: Message):
+    amount = "100.00"  # Укажи нужную сумму
+    payment_link = f"https://yoomoney.ru/quickpay/confirm.xml?receiver={YOOMONEY_WALLET}&sum={amount}&quickpay-form=shop&paymentType=AC"
+    await message.answer(f"Оплатите по ссылке: {payment_link}")
+
+async def main():
     await dp.start_polling(bot)
 
 if __name__ == "__main__":
