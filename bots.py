@@ -40,7 +40,7 @@ async def successful_payment(message: Message):
 # YooMoney (новая функция)
 @dp.message(F.text == "/pay_yoomoney")
 async def pay_with_yoomoney(message: Message):
-    amount = "100.00"  # Укажи нужную сумму
+    amount = "1"  # Укажи нужную сумму
     payment_link = f"https://yoomoney.ru/quickpay/confirm.xml?receiver={YOOMONEY_WALLET}&sum={amount}&quickpay-form=shop&paymentType=AC"
     await message.answer(f"Оплатите по ссылке: {payment_link}")
 
