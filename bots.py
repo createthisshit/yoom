@@ -18,7 +18,7 @@ YOOMONEY_BASE_URL = "https://yoomoney.ru/quickpay/confirm.xml"
 PAYMENT_SUM = 200  # сумма платежа (можно менять по необходимости)
 
 # Инициализация бота и диспетчера
-bot = Bot(token=TOKEN, parse_mode=ParseMode.HTML)
+bot = Bot(token=TOKEN, default=DefaultBotProperties(parse_mode=ParseMode.HTML))
 dp = Dispatcher()
 
 def generate_payment_link(chat_id: int, sum_value: int) -> str:
