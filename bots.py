@@ -9,7 +9,7 @@ from aiogram.types import Message, LabeledPrice, PreCheckoutQuery
 import requests
 
 # Получаем токен из переменных окружения
-TOKEN = os.getenv("BOT_TOKEN")
+TOKEN = os.getenv("8195156027:AAFmGf_dltQ9ETpswU3U4UTuWv8eRPS16fU")
 YOOMONEY_WALLET = "4100118178122985"  # Укажи свой YooMoney кошелек
 YOOMONEY_API_KEY = os.getenv("JBv8vNP6BqehGUYQuF2tTelW")  # Ключ API YooMoney
 
