@@ -29,7 +29,7 @@ async def command_start_handler(message: Message):
     # Создаем кнопки
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
         [InlineKeyboardButton(text="💫 Оплатить через Telegram Stars", callback_data="pay_stars")],
-        [InlineKeyboardButton(text="💰 Оплатить через YooMoney", url=yoomoney_payment_link)]
+        [InlineKeyboardButton(text="💰 Оплатить картой", url=yoomoney_payment_link)]
     ])
 
     await message.answer("Выберите способ оплаты:", reply_markup=keyboard)
