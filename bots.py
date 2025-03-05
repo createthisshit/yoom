@@ -28,19 +28,19 @@ async def command_start_handler(message: Message):
 
     # Создаем кнопки
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton(text="💫 Оплатить через Telegram Stars", callback_data="pay_stars")],
-        [InlineKeyboardButton(text="💰 Оплатить картой", url=yoomoney_payment_link)]
+        [InlineKeyboardButton(text="💫 Оплатить через Telegram Stars (Pay with Telegram Stars)", callback_data="pay_stars")],
+        [InlineKeyboardButton(text="💰 Оплатить картой (Pay with Card)", url=yoomoney_payment_link)]
     ])
 
-    await message.answer("Выберите способ оплаты:", reply_markup=keyboard)
+    await message.answer("Выберите способ оплаты: (Choose a payment method:)", reply_markup=keyboard)
 
 @dp.callback_query()
 async def handle_payment_callback(callback_query):
     if callback_query.data == "pay_stars":
         await bot.send_invoice(
             chat_id=callback_query.from_user.id,
-            title="Подписка на 30 дней",
-            description="Оплатить и получить ссылку",
+            title="Подписка на 30 дней (30-Day Subscription)",
+            description="Оплатить и получить ссылку (Pay and get a link)",
             payload="access_to_private",
             currency="XTR",
             prices=[LabeledPrice(label="XTR", amount=350)]
@@ -53,7 +53,7 @@ async def pre_checkout_handler(event: PreCheckoutQuery):
 @dp.message()
 async def successful_payment(message: Message):
     link = await bot.create_chat_invite_link(-1002291268265, member_limit=1)
-    await message.answer(f"Твоя ссылка:\n{link.invite_link}")
+    await message.answer(f"Твоя ссылка: (Your link:)\n{link.invite_link}")
 
 async def main():
     await dp.start_polling(bot)
@@ -61,4 +61,3 @@ async def main():
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO, stream=sys.stdout)
     asyncio.run(main())
-
