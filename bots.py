@@ -10,7 +10,7 @@ from aiogram.enums import ParseMode
 from aiogram.types import Message, LabeledPrice, PreCheckoutQuery, InlineKeyboardMarkup, InlineKeyboardButton
 
 # Получаем токен из переменных окружения
-TOKEN = "8195156027:AAFmGf_dltQ9ETpswU3U4UTuWv8eRPS16fU"
+TOKEN = "7636607718:AAGOdGACT1Z-ydrqueyQvsDW6IaE2Wo194w"
 YOOMONEY_WALLET = "4100118178122985"  # Укажи свой YooMoney кошелек
 YOOMONEY_AMOUNT = "650"  # Укажи сумму оплаты
 
