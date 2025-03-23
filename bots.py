@@ -43,7 +43,7 @@ async def handle_payment_callback(callback_query):
             description="Оплатить и получить ссылку (Pay and get a link)",
             payload="access_to_private",
             currency="XTR",
-            prices=[LabeledPrice(label="XTR", amount=350)]
+            prices=[LabeledPrice(label="XTR", amount=450)]
         )
 
 @dp.pre_checkout_query()
