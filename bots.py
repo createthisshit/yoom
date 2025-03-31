@@ -28,7 +28,6 @@ async def command_start_handler(message: Message):
 
     # Создаем кнопки
     keyboard = InlineKeyboardMarkup(inline_keyboard=[
-        [InlineKeyboardButton(text="💫 Оплатить с Telegram Stars (Pay with Stars)", callback_data="pay_stars")],
         [InlineKeyboardButton(text="💰 Оплатить картой (Pay with Card)", url=yoomoney_payment_link)]
     ])
 
