@@ -11,8 +11,8 @@ from aiogram.types import Message, LabeledPrice, PreCheckoutQuery, InlineKeyboar
 
 # Получаем токен из переменных окружения
 TOKEN = "8195156027:AAFmGf_dltQ9ETpswU3U4UTuWv8eRPS16fU"
-YOOMONEY_WALLET = "4100118193998023"  # Укажи свой YooMoney кошелек
-YOOMONEY_AMOUNT = "10"  # Укажи сумму оплаты
+YOOMONEY_WALLET = "4100118178122985"  # Укажи свой YooMoney кошелек
+YOOMONEY_AMOUNT = "550"  # Укажи сумму оплаты
 
 bot = Bot(token=TOKEN, default=DefaultBotProperties(parse_mode=ParseMode.HTML))
 dp = Dispatcher()
