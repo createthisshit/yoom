@@ -19,16 +19,26 @@ import random
 import string
 
 # Настройка логирования с уникальным ID
+class LogIdFilter(logging.Filter):
+    def __init__(self, log_id):
+        super().__init__()
+        self.log_id = log_id
+
+    def filter(self, record):
+        record.log_id = self.log_id
+        return True
+
 def generate_log_id():
     return ''.join(random.choices(string.ascii_lowercase + string.digits, k=8))
 
+log_id = generate_log_id()
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] [%(log_id)s] %(message)s",
     stream=sys.stdout,
 )
 log = logging.getLogger(__name__)
-log_id = generate_log_id()
+log.addFilter(LogIdFilter(log_id))
 log.info(f"Инициализация приложения [{log_id}]")
 
 # Пути и конфигурации
