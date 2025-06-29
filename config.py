@@ -1,4 +1,6 @@
-def fetch_bot_settings():
+from typing import Dict
+
+def fetch_bot_settings() -> Dict[str, Dict]:
     return {
         "bot1": {
             "TOKEN": "7669060547:AAF1zdVIBcmmFKQGhQ7UGUT8foFKW4EBVxs",
@@ -13,12 +15,13 @@ def fetch_bot_settings():
                 "hi": 6.00
             },
             "DESCRIPTION": {
-                "en": "Plan: Standard\nPrice: {price} USD\nDuration: 1 month\n\nAccess to private 18+ channel",
-                "ru": "Тариф: Стандарт\nСтоимость: {price} RUB\nСрок действия: 1 месяц\n\nДоступ к закрытому каналу 18+",
-                "uk": "Тариф: Стандарт\nВартість: {price} USD\nТермін дії: 1 місяць\n\nДоступ до закритого каналу 18+",
-                "tr": "Plan: Standart\nFiyat: {price} USD\nSüre: 1 ay\n\nÖzel 18+ kanala erişim",
-                "hi": "प्लान: स्टैंडर्ड\nकीमत: {price} USD\nअवधि: 1 महीना\n\nनिजी 18+ चैनल तक पहुंच"
-            }
+                "en": "Plan: Standard\nPrice: {price} USD (50% off, was {original_price} USD)\nDuration: 1 month\n\nAccess to private 18+ channel",
+                "ru": "Тариф: Стандарт\nСтоимость: {price} RUB (50% скидка, было {original_price} RUB)\nСрок действия: 1 месяц\n\nДоступ к закрытому каналу 18+",
+                "uk": "Тариф: Стандарт\nВартість: {price} USD (50% знижка, було {original_price} USD)\nТермін дії: 1 місяць\n\nДоступ до закритого каналу 18+",
+                "tr": "Plan: Standart\nFiyat: {price} USD (%50 indirim, eski fiyat {original_price} USD)\nSüre: 1 ay\n\nÖzel 18+ kanala erişim",
+                "hi": "प्लान: स्टैंडर्ड\nकीमत: {price} USD (50% छूट, पहले {original_price} USD)\nअवधि: 1 महीना\n\nनिजी 18+ चैनल तक पहुंच"
+            },
+            "START_PHOTO": "https://via.placeholder.com/800x400.png?text=Welcome+Banner"
         },
         "bot2": {
             "TOKEN": "8173622705:AAE88BPX5k1mHuwFFBlWJS8ixxa36EmuCC0",
@@ -33,12 +36,13 @@ def fetch_bot_settings():
                 "hi": 5.50
             },
             "DESCRIPTION": {
-                "en": "Plan: Standard\nPrice: {price} USD\nDuration: 1 month\n\nAccess to private 18+ channel",
-                "ru": "Тариф: Стандарт\nСтоимость: {price} RUB\nСрок действия: 1 месяц\n\nДоступ к закрытому каналу 18+",
-                "uk": "Тариф: Стандарт\nВартість: {price} USD\nТермін дії: 1 місяць\n\nДоступ до закритого каналу 18+",
-                "tr": "Plan: Standart\nFiyat: {price} USD\nSüre: 1 ay\n\nÖzel 18+ kanala erişim",
-                "hi": "प्लान: स्टैंडर्ड\nकीमत: {price} USD\nअवधि: 1 महीना\n\nनिजी 18+ चैनल तक पहुंच"
-            }
+                "en": "Plan: Standard\nPrice: {price} USD (50% off, was {original_price} USD)\nDuration: 1 month\n\nAccess to private 18+ channel",
+                "ru": "Тариф: Стандарт\nСтоимость: {price} RUB (50% скидка, было {original_price} RUB)\nСрок действия: 1 месяц\n\nДоступ к закрытому каналу 18+",
+                "uk": "Тариф: Стандарт\nВартість: {price} USD (50% знижка, було {original_price} USD)\nТермін дії: 1 місяць\n\nДоступ до закритого каналу 18+",
+                "tr": "Plan: Standart\nFiyat: {price} USD (%50 indirim, eski fiyat {original_price} USD)\nSüre: 1 ay\n\nÖzel 18+ kanala erişim",
+                "hi": "प्लान: स्टैंडर्ड\nकीमत: {price} USD (50% छूट, पहले {original_price} USD)\nअवधि: 1 महीना\n\nनिजी 18+ चैनल तक पहुंच"
+            },
+            "START_PHOTO": "https://via.placeholder.com/800x400.png?text=Welcome+Banner"
         },
         "bot3": {
             "TOKEN": "7946129764:AAGaQQXbkBqdYw4ftzR0DwzGaxKrC1xXBqQ",
@@ -53,12 +57,13 @@ def fetch_bot_settings():
                 "hi": 5.80
             },
             "DESCRIPTION": {
-                "en": "Plan: Standard\nPrice: {price} USD\nDuration: 1 month\n\nAccess to private 18+ channel",
-                "ru": "Тариф: Стандарт\nСтоимость: {price} RUB\nСрок действия: 1 месяц\n\nДоступ к закрытому каналу 18+",
-                "uk": "Тариф: Стандарт\nВартість: {price} USD\nТермін дії: 1 місяць\n\nДоступ до закритого каналу 18+",
-                "tr": "Plan: Standart\nFiyat: {price} USD\nSüre: 1 ay\n\nÖzel 18+ kanala erişim",
-                "hi": "प्लान: स्टैंडर्ड\nकीमत: {price} USD\nअवधि: 1 महीना\n\nनिजी 18+ चैनल तक पहुंच"
-            }
+                "en": "Plan: Standard\nPrice: {price} USD (50% off, was {original_price} USD)\nDuration: 1 month\n\nAccess to private 18+ channel",
+                "ru": "Тариф: Стандарт\nСтоимость: {price} RUB (50% скидка, было {original_price} RUB)\nСрок действия: 1 месяц\n\nДоступ к закрытому каналу 18+",
+                "uk": "Тариф: Стандарт\nВартість: {price} USD (50% знижка, було {original_price} USD)\nТермін дії: 1 місяць\n\nДоступ до закритого каналу 18+",
+                "tr": "Plan: Standart\nFiyat: {price} USD (%50 indirim, eski fiyat {original_price} USD)\nSüre: 1 ay\n\nÖzel 18+ kanala erişim",
+                "hi": "प्लान: स्टैंडर्ड\nकीमत: {price} USD (50% छूट, पहले {original_price} USD)\nअवधि: 1 महीना\n\nनिजी 18+ चैनल तक पहुंच"
+            },
+            "START_PHOTO": "https://via.placeholder.com/800x400.png?text=Welcome+Banner"
         },
         "bot4": {
             "TOKEN": "7737672035:AAHpIGap7ZLt2eE1ZRT6j6YeSdnIuBp2Gqw",
@@ -73,12 +78,13 @@ def fetch_bot_settings():
                 "hi": 5.50
             },
             "DESCRIPTION": {
-                "en": "Plan: Standard\nPrice: {price} USD\nDuration: 1 month\n\nAccess to private 18+ channel",
-                "ru": "Тариф: Стандарт\nСтоимость: {price} RUB\nСрок действия: 1 месяц\n\nДоступ к закрытому каналу 18+",
-                "uk": "Тариф: Стандарт\nВартість: {price} USD\nТермін дії: 1 місяць\n\nДоступ до закритого каналу 18+",
-                "tr": "Plan: Standart\nFiyat: {price} USD\nSüre: 1 ay\n\nÖzel 18+ kanala erişim",
-                "hi": "प्लान: स्टैंडर्ड\nकीमत: {price} USD\nअवधि: 1 महीना\n\nनिजी 18+ चैनल तक पहुंच"
-            }
+                "en": "Plan: Standard\nPrice: {price} USD (50% off, was {original_price} USD)\nDuration: 1 month\n\nAccess to private 18+ channel",
+                "ru": "Тариф: Стандарт\nСтоимость: {price} RUB (50% скидка, было {original_price} RUB)\nСрок действия: 1 месяц\n\nДоступ к закрытому каналу 18+",
+                "uk": "Тариф: Стандарт\nВартість: {price} USD (50% знижка, було {original_price} USD)\nТермін дії: 1 місяць\n\nДоступ до закритого каналу 18+",
+                "tr": "Plan: Standart\nFiyat: {price} USD (%50 indirim, eski fiyat {original_price} USD)\nSüre: 1 ay\n\nÖzel 18+ kanala erişim",
+                "hi": "प्लान: स्टैंडर्ड\nकीमत: {price} USD (50% छूट, पहले {original_price} USD)\nअवधि: 1 महीना\n\nनिजी 18+ चैनल तक पहुंच"
+            },
+            "START_PHOTO": "https://via.placeholder.com/800x400.png?text=Welcome+Banner"
         },
         "bot5": {
             "TOKEN": "7249884916:AAErSUZlJh552jcmyHVBp1BKJQC6MlC5ldM",
@@ -93,12 +99,13 @@ def fetch_bot_settings():
                 "hi": 6.00
             },
             "DESCRIPTION": {
-                "en": "Plan: Standard\nPrice: {price} USD\nDuration: 1 month\n\nAccess to private 18+ channel",
-                "ru": "Тариф: Стандарт\nСтоимость: {price} RUB\nСрок действия: 1 месяц\n\nДоступ к закрытому каналу 18+",
-                "uk": "Тариф: Стандарт\nВартість: {price} USD\nТермін дії: 1 місяць\n\nДоступ до закритого каналу 18+",
-                "tr": "Plan: Standart\nFiyat: {price} USD\nSüre: 1 ay\n\nÖzel 18+ kanala erişim",
-                "hi": "प्लान: स्टैंडर्ड\nकीमत: {price} USD\nअवधि: 1 महीना\n\nनिजी 18+ चैनल तक पहुंच"
-            }
+                "en": "Plan: Standard\nPrice: {price} USD (50% off, was {original_price} USD)\nDuration: 1 month\n\nAccess to private 18+ channel",
+                "ru": "Тариф: Стандарт\nСтоимость: {price} RUB (50% скидка, было {original_price} RUB)\nСрок действия: 1 месяц\n\nДоступ к закрытому каналу 18+",
+                "uk": "Тариф: Стандарт\nВартість: {price} USD (50% знижка, було {original_price} USD)\nТермін дії: 1 місяць\n\nДоступ до закритого каналу 18+",
+                "tr": "Plan: Standart\nFiyat: {price} USD (%50 indirim, eski fiyat {original_price} USD)\nSüre: 1 ay\n\nÖzel 18+ kanala erişim",
+                "hi": "प्लान: स्टैंडर्ड\nकीमत: {price} USD (50% छूट, पहले {original_price} USD)\nअवधि: 1 महीना\n\nनिजी 18+ चैनल तक पहुंच"
+            },
+            "START_PHOTO": "https://via.placeholder.com/800x400.png?text=Welcome+Banner"
         },
         "bot6": {
             "TOKEN": "7796522161:AAGLVMbHoMHwqyQKDC6YlVsTMUQBcvb8ZYA",
@@ -113,12 +120,13 @@ def fetch_bot_settings():
                 "hi": 6.50
             },
             "DESCRIPTION": {
-                "en": "Plan: Standard\nPrice: {price} USD\nDuration: 1 month\n\nAccess to private 18+ channel",
-                "ru": "Тариф: Стандарт\nСтоимость: {price} RUB\nСрок действия: 1 месяц\n\nДоступ к закрытому каналу 18+",
-                "uk": "Тариф: Стандарт\nВартість: {price} USD\nТермін дії: 1 місяць\n\nДоступ до закритого каналу 18+",
-                "tr": "Plan: Standart\nFiyat: {price} USD\nSüre: 1 ay\n\nÖzel 18+ kanala erişim",
-                "hi": "प्लान: स्टैंडर्ड\nकीमत: {price} USD\nअवधि: 1 महीना\n\nनिजी 18+ चैनल तक पहुंच"
-            }
+                "en": "Plan: Standard\nPrice: {price} USD (50% off, was {original_price} USD)\nDuration: 1 month\n\nAccess to private 18+ channel",
+                "ru": "Тариф: Стандарт\nСтоимость: {price} RUB (50% скидка, было {original_price} RUB)\nСрок действия: 1 месяц\n\nДоступ к закрытому каналу 18+",
+                "uk": "Тариф: Стандарт\nВартість: {price} USD (50% знижка, було {original_price} USD)\nТермін дії: 1 місяць\n\nДоступ до закритого каналу 18+",
+                "tr": "Plan: Standart\nFiyat: {price} USD (%50 indirim, eski fiyat {original_price} USD)\nSüre: 1 ay\n\nÖzel 18+ kanala erişim",
+                "hi": "प्लान: स्टैंडर्ड\nकीमत: {price} USD (50% छूट, पहले {original_price} USD)\nअवधि: 1 महीना\n\nनिजी 18+ चैनल तक पहुंच"
+            },
+            "START_PHOTO": "https://via.placeholder.com/800x400.png?text=Welcome+Banner"
         },
         "bot7": {
             "TOKEN": "7986965799:AAFpmrCYKQTFxOanxdvwEKXlsLh84TAoMTU",
@@ -133,12 +141,13 @@ def fetch_bot_settings():
                 "hi": 6.00
             },
             "DESCRIPTION": {
-                "en": "Plan: Standard\nPrice: {price} USD\nDuration: 1 month\n\nAccess to private 18+ channel",
-                "ru": "Тариф: Стандарт\nСтоимость: {price} RUB\nСрок действия: 1 месяц\n\nДоступ к закрытому каналу 18+",
-                "uk": "Тариф: Стандарт\nВартість: {price} USD\nТермін дії: 1 місяць\n\nДоступ до закритого каналу 18+",
-                "tr": "Plan: Standart\nFiyat: {price} USD\nSüre: 1 ay\n\nÖzel 18+ kanala erişim",
-                "hi": "प्लान: स्टैंडर्ड\nकीमत: {price} USD\nअवधि: 1 महीना\n\nनिजी 18+ चैनल तक पहुंच"
-            }
+                "en": "Plan: Standard\nPrice: {price} USD (50% off, was {original_price} USD)\nDuration: 1 month\n\nAccess to private 18+ channel",
+                "ru": "Тариф: Стандарт\nСтоимость: {price} RUB (50% скидка, было {original_price} RUB)\nСрок действия: 1 месяц\n\nДоступ к закрытому каналу 18+",
+                "uk": "Тариф: Стандарт\nВартість: {price} USD (50% знижка, було {original_price} USD)\nТермін дії: 1 місяць\n\nДоступ до закритого каналу 18+",
+                "tr": "Plan: Standart\nFiyat: {price} USD (%50 indirim, eski fiyat {original_price} USD)\nSüre: 1 ay\n\nÖzel 18+ kanala erişim",
+                "hi": "प्लान: स्टैंडर्ड\nकीमत: {price} USD (50% छूट, पहले {original_price} USD)\nअवधि: 1 महीना\n\nनिजी 18+ चैनल तक पहुंच"
+            },
+            "START_PHOTO": "https://via.placeholder.com/800x400.png?text=Welcome+Banner"
         },
         "bot8": {
             "TOKEN": "8091017735:AAF01_wUHzRCk2Oi3wlDhzRhL8yxKOvx2k8",
@@ -153,12 +162,13 @@ def fetch_bot_settings():
                 "hi": 6.00
             },
             "DESCRIPTION": {
-                "en": "Plan: Standard\nPrice: {price} USD\nDuration: 1 month\n\nAccess to private 18+ channel",
-                "ru": "Тариф: Стандарт\nСтоимость: {price} RUB\nСрок действия: 1 месяц\n\nДоступ к закрытому каналу 18+",
-                "uk": "Тариф: Стандарт\nВартість: {price} USD\nТермін дії: 1 місяць\n\nДоступ до закритого каналу 18+",
-                "tr": "Plan: Standart\nFiyat: {price} USD\nSüre: 1 ay\n\nÖzel 18+ kanala erişim",
-                "hi": "प्लान: स्टैंडर्ड\nकीमत: {price} USD\nअवधि: 1 महीना\n\nनिजी 18+ चैनल तक पहुंच"
-            }
+                "en": "Plan: Standard\nPrice: {price} USD (50% off, was {original_price} USD)\nDuration: 1 month\n\nAccess to private 18+ channel",
+                "ru": "Тариф: Стандарт\nСтоимость: {price} RUB (50% скидка, было {original_price} RUB)\nСрок действия: 1 месяц\n\nДоступ к закрытому каналу 18+",
+                "uk": "Тариф: Стандарт\nВартість: {price} USD (50% знижка, було {original_price} USD)\nТермін дії: 1 місяць\n\nДоступ до закритого каналу 18+",
+                "tr": "Plan: Standart\nFiyat: {price} USD (%50 indirim, eski fiyat {original_price} USD)\nSüre: 1 ay\n\nÖzel 18+ kanala erişim",
+                "hi": "प्लान: स्टैंडर्ड\nकीमत: {price} USD (50% छूट, पहले {original_price} USD)\nअवधि: 1 महीना\n\nनिजी 18+ चैनल तक पहुंच"
+            },
+            "START_PHOTO": "https://via.placeholder.com/800x400.png?text=Welcome+Banner"
         },
         "bot9": {
             "TOKEN": "7656812252:AAHIALM6ORZr2RgnKolEc-m66IFguRNGuvA",
@@ -173,12 +183,13 @@ def fetch_bot_settings():
                 "hi": 5.50
             },
             "DESCRIPTION": {
-                "en": "Plan: Standard\nPrice: {price} USD\nDuration: 1 month\n\nAccess to private 18+ channel",
-                "ru": "Тариф: Стандарт\nСтоимость: {price} RUB\nСрок действия: 1 месяц\n\nДоступ к закрытому каналу 18+",
-                "uk": "Тариф: Стандарт\nВартість: {price} USD\nТермін дії: 1 місяць\n\nДоступ до закритого каналу 18+",
-                "tr": "Plan: Standart\nFiyat: {price} USD\nSüre: 1 ay\n\nÖzel 18+ kanala erişim",
-                "hi": "प्लान: स्टैंडर्ड\nकीमत: {price} USD\nअवधि: 1 महीना\n\nनिजी 18+ चैनल तक पहुंच"
-            }
+                "en": "Plan: Standard\nPrice: {price} USD (50% off, was {original_price} USD)\nDuration: 1 month\n\nAccess to private 18+ channel",
+                "ru": "Тариф: Стандарт\nСтоимость: {price} RUB (50% скидка, было {original_price} RUB)\nСрок действия: 1 месяц\n\nДоступ к закрытому каналу 18+",
+                "uk": "Тариф: Стандарт\nВартість: {price} USD (50% знижка, було {original_price} USD)\nТермін дії: 1 місяць\n\nДоступ до закритого каналу 18+",
+                "tr": "Plan: Standart\nFiyat: {price} USD (%50 indirim, eski fiyat {original_price} USD)\nSüre: 1 ay\n\nÖzel 18+ kanala erişim",
+                "hi": "प्लान: स्टैंडर्ड\nकीमत: {price} USD (50% छूट, पहले {original_price} USD)\nअवधि: 1 महीना\n\nनिजी 18+ चैनल तक पहुंच"
+            },
+            "START_PHOTO": "https://via.placeholder.com/800x400.png?text=Welcome+Banner"
         },
         "bot10": {
             "TOKEN": "8195156027:AAFmGf_dltQ9ETpswU3U4UTuWv8eRPS16fU",
@@ -193,12 +204,13 @@ def fetch_bot_settings():
                 "hi": 6.50
             },
             "DESCRIPTION": {
-                "en": "Plan: Standard\nPrice: {price} USD\nDuration: 1 month\n\nAccess to private 18+ channel",
-                "ru": "Тариф: Стандарт\nСтоимость: {price} RUB\nСрок действия: 1 месяц\n\nДоступ к закрытому каналу 18+",
-                "uk": "Тариф: Стандарт\nВартість: {price} USD\nТермін дії: 1 місяць\n\nДоступ до закритого каналу 18+",
-                "tr": "Plan: Standart\nFiyat: {price} USD\nSüre: 1 ay\n\nÖzel 18+ kanala erişim",
-                "hi": "प्लान: स्टैंडर्ड\nकीमत: {price} USD\nअवधि: 1 महीना\n\nनिजी 18+ चैनल तक पहुंच"
-            }
+                "en": "Plan: Standard\nPrice: {price} USD (50% off, was {original_price} USD)\nDuration: 1 month\n\nAccess to private 18+ channel",
+                "ru": "Тариф: Стандарт\nСтоимость: {price} RUB (50% скидка, было {original_price} RUB)\nСрок действия: 1 месяц\n\nДоступ к закрытому каналу 18+",
+                "uk": "Тариф: Стандарт\nВартість: {price} USD (50% знижка, було {original_price} USD)\nТермін дії: 1 місяць\n\nДоступ до закритого каналу 18+",
+                "tr": "Plan: Standart\nFiyat: {price} USD (%50 indirim, eski fiyat {original_price} USD)\nSüre: 1 ay\n\nÖzel 18+ kanala erişim",
+                "hi": "प्लान: स्टैंडर्ड\nकीमत: {price} USD (50% छूट, पहले {original_price} USD)\nअवधि: 1 महीना\n\nनिजी 18+ चैनल तक पहुंच"
+            },
+            "START_PHOTO": "https://i.imgur.com/Hm3M4kD.jpeg"
         },
         "bot11": {
             "TOKEN": "7908748621:AAH0XS-abiMUPakjefaVlOommENiCZAcLqA",
@@ -213,12 +225,13 @@ def fetch_bot_settings():
                 "hi": 6.60
             },
             "DESCRIPTION": {
-                "en": "Plan: Standard\nPrice: {price} USD\nDuration: 1 month\n\nAccess to private 18+ channel",
-                "ru": "Тариф: Стандарт\nСтоимость: {price} RUB\nСрок действия: 1 месяц\n\nДоступ к закрытому каналу 18+",
-                "uk": "Тариф: Стандарт\nВартість: {price} USD\nТермін дії: 1 місяць\n\nДоступ до закритого каналу 18+",
-                "tr": "Plan: Standart\nFiyat: {price} USD\nSüre: 1 ay\n\nÖzel 18+ kanala erişim",
-                "hi": "प्लान: स्टैंडर्ड\nकीमत: {price} USD\nअवधि: 1 महीना\n\nनिजी 18+ चैनल तक पहुंच"
-            }
+                "en": "Plan: Standard\nPrice: {price} USD (50% off, was {original_price} USD)\nDuration: 1 month\n\nAccess to private 18+ channel",
+                "ru": "Тариф: Стандарт\nСтоимость: {price} RUB (50% скидка, было {original_price} RUB)\nСрок действия: 1 месяц\n\nДоступ к закрытому каналу 18+",
+                "uk": "Тариф: Стандарт\nВартість: {price} USD (50% знижка, було {original_price} USD)\nТермін дії: 1 місяць\n\nДоступ до закритого каналу 18+",
+                "tr": "Plan: Standart\nFiyat: {price} USD (%50 indirim, eski fiyat {original_price} USD)\nSüre: 1 ay\n\nÖzel 18+ kanala erişim",
+                "hi": "प्लान: स्टैंडर्ड\nकीमत: {price} USD (50% छूट, पहले {original_price} USD)\nअवधि: 1 महीना\n\nनिजी 18+ चैनल तक पहुंच"
+            },
+            "START_PHOTO": "https://i.imgur.com/zB7a0p5.jpeg"
         },
         "bot12": {
             "TOKEN": "7241683107:AAEG6RCRM4Ar1sDYpTV8BsaHfGUj2WXobhI",
@@ -233,12 +246,13 @@ def fetch_bot_settings():
                 "hi": 5.00
             },
             "DESCRIPTION": {
-                "en": "Plan: Standard\nPrice: {price} USD\nDuration: 1 month\n\nAccess to private 18+ channel",
-                "ru": "Тариф: Стандарт\nСтоимость: {price} RUB\nСрок действия: 1 месяц\n\nДоступ к закрытому каналу 18+",
-                "uk": "Тариф: Стандарт\nВартість: {price} USD\nТермін дії: 1 місяць\n\nДоступ до закритого каналу 18+",
-                "tr": "Plan: Standart\nFiyat: {price} USD\nSüre: 1 ay\n\nÖzel 18+ kanala erişim",
-                "hi": "प्लान: स्टैंडर्ड\nकीमत: {price} USD\nअवधि: 1 महीना\n\nनिजी 18+ चैनल तक पहुंच"
-            }
+                "en": "Plan: Standard\nPrice: {price} USD (50% off, was {original_price} USD)\nDuration: 1 month\n\nAccess to private 18+ channel",
+                "ru": "Тариф: Стандарт\nСтоимость: {price} RUB (50% скидка, было {original_price} RUB)\nСрок действия: 1 месяц\n\nДоступ к закрытому каналу 18+",
+                "uk": "Тариф: Стандарт\nВартість: {price} USD (50% знижка, було {original_price} USD)\nТермін дії: 1 місяць\n\nДоступ до закритого каналу 18+",
+                "tr": "Plan: Standart\nFiyat: {price} USD (%50 indirim, eski fiyat {original_price} USD)\nSüre: 1 ay\n\nÖzel 18+ kanala erişim",
+                "hi": "प्लान: स्टैंडर्ड\nकीमत: {price} USD (50% छूट, पहले {original_price} USD)\nअवधि: 1 महीना\n\nनिजी 18+ चैनल तक पहुंच"
+            },
+            "START_PHOTO": "https://via.placeholder.com/800x400.png?text=Welcome+Banner"
         },
         "bot13": {
             "TOKEN": "7741979722:AAEBzPjM4HqoTdNajwdv2plXvdraARgMbhQ",
@@ -253,12 +267,13 @@ def fetch_bot_settings():
                 "hi": 5.50
             },
             "DESCRIPTION": {
-                "en": "Plan: Standard\nPrice: {price} USD\nDuration: 1 month\n\nAccess to private 18+ channel",
-                "ru": "Тариф: Стандарт\nСтоимость: {price} RUB\nСрок действия: 1 месяц\n\nДоступ к закрытому каналу 18+",
-                "uk": "Тариф: Стандарт\nВартість: {price} USD\nТермін дії: 1 місяць\n\nДоступ до закритого каналу 18+",
-                "tr": "Plan: Standart\nFiyat: {price} USD\nSüre: 1 ay\n\nÖzel 18+ kanala erişim",
-                "hi": "प्लान: स्टैंडर्ड\nकीमत: {price} USD\nअवधि: 1 महीना\n\nनिजी 18+ चैनल तक पहुंच"
-            }
+                "en": "Plan: Standard\nPrice: {price} USD (50% off, was {original_price} USD)\nDuration: 1 month\n\nAccess to private 18+ channel",
+                "ru": "Тариф: Стандарт\nСтоимость: {price} RUB (50% скидка, было {original_price} RUB)\nСрок действия: 1 месяц\n\nДоступ к закрытому каналу 18+",
+                "uk": "Тариф: Стандарт\nВартість: {price} USD (50% знижка, було {original_price} USD)\nТермін дії: 1 місяць\n\nДоступ до закритого каналу 18+",
+                "tr": "Plan: Standart\nFiyat: {price} USD (%50 indirim, eski fiyat {original_price} USD)\nSüre: 1 ay\n\nÖzel 18+ kanala erişim",
+                "hi": "प्लान: स्टैंडर्ड\nकीमत: {price} USD (50% छूट, पहले {original_price} USD)\nअवधि: 1 महीना\n\nनिजी 18+ चैनल तक पहुंच"
+            },
+            "START_PHOTO": "https://i.imgur.com/6uJ2sBe.jpeg"
         },
         "bot14": {
             "TOKEN": "7629991596:AAHkBKWyvz7T2MdaItlQcL90YnOi0Zh11tY",
@@ -273,12 +288,13 @@ def fetch_bot_settings():
                 "hi": 5.25
             },
             "DESCRIPTION": {
-                "en": "Plan: Standard\nPrice: {price} USD\nDuration: 1 month\n\nAccess to private 18+ channel",
-                "ru": "Тариф: Стандарт\nСтоимость: {price} RUB\nСрок действия: 1 месяц\n\nДоступ к закрытому каналу 18+",
-                "uk": "Тариф: Стандарт\nВартість: {price} USD\nТермін дії: 1 місяць\n\nДоступ до закритого каналу 18+",
-                "tr": "Plan: Standart\nFiyat: {price} USD\nSüre: 1 ay\n\nÖzel 18+ kanala erişim",
-                "hi": "प्लान: स्टैंडर्ड\nकीमत: {price} USD\nअवधि: 1 महीना\n\nनिजी 18+ चैनल तक पहुंच"
-            }
+                "en": "Plan: Standard\nPrice: {price} USD (50% off, was {original_price} USD)\nDuration: 1 month\n\nAccess to private 18+ channel",
+                "ru": "Тариф: Стандарт\nСтоимость: {price} RUB (50% скидка, было {original_price} RUB)\nСрок действия: 1 месяц\n\nДоступ к закрытому каналу 18+",
+                "uk": "Тариф: Стандарт\nВартість: {price} USD (50% знижка, було {original_price} USD)\nТермін дії: 1 місяць\n\nДоступ до закритого каналу 18+",
+                "tr": "Plan: Standart\nFiyat: {price} USD (%50 indirim, eski fiyat {original_price} USD)\nSüre: 1 ay\n\nÖzel 18+ kanala erişim",
+                "hi": "प्लान: स्टैंडर्ड\nकीमत: {price} USD (50% छूट, पहले {original_price} USD)\nअवधि: 1 महीना\n\nनिजी 18+ चैनल तक पहुंच"
+            },
+            "START_PHOTO": "https://via.placeholder.com/800x400.png?text=Welcome+Banner"
         },
         "bot15": {
             "TOKEN": "7374584059:AAF34FW4ndPOJSgblIiVJ3oY5w8o_hdQhsA",
@@ -293,12 +309,13 @@ def fetch_bot_settings():
                 "hi": 6.00
             },
             "DESCRIPTION": {
-                "en": "Plan: Standard\nPrice: {price} USD\nDuration: 1 month\n\nAccess to private 18+ channel",
-                "ru": "Тариф: Стандарт\nСтоимость: {price} RUB\nСрок действия: 1 месяц\n\nДоступ к закрытому каналу 18+",
-                "uk": "Тариф: Стандарт\nВартість: {price} USD\nТермін дії: 1 місяць\n\nДоступ до закритого каналу 18+",
-                "tr": "Plan: Standart\nFiyat: {price} USD\nSüre: 1 ay\n\nÖzel 18+ kanala erişim",
-                "hi": "प्लान: स्टैंडर्ड\nकीमत: {price} USD\nअवधि: 1 महीना\n\nनिजी 18+ चैनल तक पहुंच"
-            }
+                "en": "Plan: Standard\nPrice: {price} USD (50% off, was {original_price} USD)\nDuration: 1 month\n\nAccess to private 18+ channel",
+                "ru": "Тариф: Стандарт\nСтоимость: {price} RUB (50% скидка, было {original_price} RUB)\nСрок действия: 1 месяц\n\nДоступ к закрытому каналу 18+",
+                "uk": "Тариф: Стандарт\nВартість: {price} USD (50% знижка, було {original_price} USD)\nТермін дії: 1 місяць\n\nДоступ до закритого каналу 18+",
+                "tr": "Plan: Standart\nFiyat: {price} USD (%50 indirim, eski fiyat {original_price} USD)\nSüre: 1 ay\n\nÖzel 18+ kanala erişim",
+                "hi": "प्लान: स्टैंडर्ड\nकीमत: {price} USD (50% छूट, पहले {original_price} USD)\nअवधि: 1 महीना\n\nनिजी 18+ चैनल तक पहुंच"
+            },
+            "START_PHOTO": "https://via.placeholder.com/800x400.png?text=Welcome+Banner"
         },
         "bot16": {
             "TOKEN": "7657205678:AAEnvAgXr-ATlBFkbfWAGh3bAy2X7GzBDfE",
@@ -313,12 +330,13 @@ def fetch_bot_settings():
                 "hi": 6.00
             },
             "DESCRIPTION": {
-                "en": "Plan: Standard\nPrice: {price} USD\nDuration: 1 month\n\nAccess to private 18+ channel",
-                "ru": "Тариф: Стандарт\nСтоимость: {price} RUB\nСрок действия: 1 месяц\n\nДоступ к закрытому каналу 18+",
-                "uk": "Тариф: Стандарт\nВартість: {price} USD\nТермін дії: 1 місяць\n\nДоступ до закритого каналу 18+",
-                "tr": "Plan: Standart\nFiyat: {price} USD\nSüre: 1 ay\n\nÖzel 18+ kanala erişim",
-                "hi": "प्लान: स्टैंडर्ड\nकीमत: {price} USD\nअवधि: 1 महीना\n\nनिजी 18+ चैनल तक पहुंच"
-            }
+                "en": "Plan: Standard\nPrice: {price} USD (50% off, was {original_price} USD)\nDuration: 1 month\n\nAccess to private 18+ channel",
+                "ru": "Тариф: Стандарт\nСтоимость: {price} RUB (50% скидка, было {original_price} RUB)\nСрок действия: 1 месяц\n\nДоступ к закрытому каналу 18+",
+                "uk": "Тариф: Стандарт\nВартість: {price} USD (50% знижка, було {original_price} USD)\nТермін дії: 1 місяць\n\nДоступ до закритого каналу 18+",
+                "tr": "Plan: Standart\nFiyat: {price} USD (%50 indirim, eski fiyat {original_price} USD)\nSüre: 1 ay\n\nÖzel 18+ kanala erişim",
+                "hi": "प्लान: स्टैंडर्ड\nकीमत: {price} USD (50% छूट, पहले {original_price} USD)\nअवधि: 1 महीना\n\nनिजी 18+ चैनल तक पहुंच"
+            },
+            "START_PHOTO": "https://via.placeholder.com/800x400.png?text=Welcome+Banner"
         },
         "bot17": {
             "TOKEN": "8142220679:AAHQxMgyY3xyYVw2oCj7Ud_m47uVNqcuBDE",
@@ -333,12 +351,13 @@ def fetch_bot_settings():
                 "hi": 6.00
             },
             "DESCRIPTION": {
-                "en": "Plan: Standard\nPrice: {price} USD\nDuration: 1 month\n\nAccess to private 18+ channel",
-                "ru": "Тариф: Стандарт\nСтоимость: {price} RUB\nСрок действия: 1 месяц\n\nДоступ к закрытому каналу 18+",
-                "uk": "Тариф: Стандарт\nВартість: {price} USD\nТермін дії: 1 місяць\n\nДоступ до закритого каналу 18+",
-                "tr": "Plan: Standart\nFiyat: {price} USD\nSüre: 1 ay\n\nÖzel 18+ kanala erişim",
-                "hi": "प्लान: स्टैंडर्ड\nकीमत: {price} USD\nअवधि: 1 महीना\n\nनिजी 18+ चैनल तक पहुंच"
-            }
+                "en": "Plan: Standard\nPrice: {price} USD (50% off, was {original_price} USD)\nDuration: 1 month\n\nAccess to private 18+ channel",
+                "ru": "Тариф: Стандарт\nСтоимость: {price} RUB (50% скидка, было {original_price} RUB)\nСрок действия: 1 месяц\n\nДоступ к закрытому каналу 18+",
+                "uk": "Тариф: Стандарт\nВартість: {price} USD (50% знижка, було {original_price} USD)\nТермін дії: 1 місяць\n\nДоступ до закритого каналу 18+",
+                "tr": "Plan: Standart\nFiyat: {price} USD (%50 indirim, eski fiyat {original_price} USD)\nSüre: 1 ay\n\nÖzel 18+ kanala erişim",
+                "hi": "प्लान: स्टैंडर्ड\nकीमत: {price} USD (50% छूट, पहले {original_price} USD)\nअवधि: 1 महीना\n\nनिजी 18+ चैनल तक पहुंच"
+            },
+            "START_PHOTO": "https://via.placeholder.com/800x400.png?text=Welcome+Banner"
         },
         "bot18": {
             "TOKEN": "7500294585:AAGRJmFnjDZj0MI_TokYEX-z5Gw40h_6hA0",
@@ -353,12 +372,13 @@ def fetch_bot_settings():
                 "hi": 6.00
             },
             "DESCRIPTION": {
-                "en": "Plan: Standard\nPrice: {price} USD\nDuration: 1 month\n\nAccess to private 18+ channel",
-                "ru": "Тариф: Стандарт\nСтоимость: {price} RUB\nСрок действия: 1 месяц\n\nДоступ к закрытому каналу 18+",
-                "uk": "Тариф: Стандарт\nВартість: {price} USD\nТермін дії: 1 місяць\n\nДоступ до закритого каналу 18+",
-                "tr": "Plan: Standart\nFiyat: {price} USD\nSüre: 1 ay\n\nÖzel 18+ kanala erişim",
-                "hi": "प्लान: स्टैंडर्ड\nकीमत: {price} USD\nअवधि: 1 महीना\n\nनिजी 18+ चैनल तक पहुंच"
-            }
+                "en": "Plan: Standard\nPrice: {price} USD (50% off, was {original_price} USD)\nDuration: 1 month\n\nAccess to private 18+ channel",
+                "ru": "Тариф: Стандарт\nСтоимость: {price} RUB (50% скидка, было {original_price} RUB)\nСрок действия: 1 месяц\n\nДоступ к закрытому каналу 18+",
+                "uk": "Тариф: Стандарт\nВартість: {price} USD (50% знижка, було {original_price} USD)\nТермін дії: 1 місяць\n\nДоступ до закритого каналу 18+",
+                "tr": "Plan: Standart\nFiyat: {price} USD (%50 indirim, eski fiyat {original_price} USD)\nSüre: 1 ay\n\nÖzel 18+ kanala erişim",
+                "hi": "प्लान: स्टैंडर्ड\nकीमत: {price} USD (50% छूट, पहले {original_price} USD)\nअवधि: 1 महीना\n\nनिजी 18+ चैनल तक पहुंच"
+            },
+            "START_PHOTO": "https://via.placeholder.com/800x400.png?text=Welcome+Banner"
         },
         "bot19": {
             "TOKEN": "8160739105:AAHNQYj7D643-TclWtY07_qJX8gHbMPde-8",
@@ -373,18 +393,19 @@ def fetch_bot_settings():
                 "hi": 6.00
             },
             "DESCRIPTION": {
-                "en": "Plan: Standard\nPrice: {price} USD\nDuration: 1 month\n\nAccess to private 18+ channel",
-                "ru": "Тариф: Стандарт\nСтоимость: {price} RUB\nСрок действия: 1 месяц\n\nДоступ к закрытому каналу 18+",
-                "uk": "Тариф: Стандарт\nВартість: {price} USD\nТермін дії: 1 місяць\n\nДоступ до закритого каналу 18+",
-                "tr": "Plan: Standart\nFiyat: {price} USD\nSüre: 1 ay\n\nÖzel 18+ kanala erişim",
-                "hi": "प्लान: स्टैंडर्ड\nकीमत: {price} USD\nअवधि: 1 महीना\n\nनिजी 18+ चैनल तक पहुंच"
-            }
+                "en": "Plan: Standard\nPrice: {price} USD (50% off, was {original_price} USD)\nDuration: 1 month\n\nAccess to private 18+ channel",
+                "ru": "Тариф: Стандарт\nСтоимость: {price} RUB (50% скидка, было {original_price} RUB)\nСрок действия: 1 месяц\n\nДоступ к закрытому каналу 18+",
+                "uk": "Тариф: Стандарт\nВартість: {price} USD (50% знижка, було {original_price} USD)\nТермін дії: 1 місяць\n\nДоступ до закритого каналу 18+",
+                "tr": "Plan: Standart\nFiyat: {price} USD (%50 indirim, eski fiyat {original_price} USD)\nSüre: 1 ay\n\nÖzel 18+ kanala erişim",
+                "hi": "प्लान: स्टैंडर्ड\nकीमत: {price} USD (50% छूट, पहले {original_price} USD)\nअवधि: 1 महीना\n\nनिजी 18+ चैनल तक पहुंच"
+            },
+            "START_PHOTO": "https://via.placeholder.com/800x400.png?text=Welcome+Banner"
         },
         "bot20": {
-            "TOKEN": "7731184991:AAGdZ97deBS_5xTdUMO3Kw8xpphkJ2M1Uqk",
+            "TOKEN": "PLACEHOLDER_TOKEN_20:AAHxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
             "YOOMONEY_WALLET": "4100118178122985",
             "NOTIFICATION_SECRET": "CoqQlgE3E5cTzyAKY1LSiLU1",
-            "PRIVATE_CHANNEL_ID": -1002794054378,
+            "PRIVATE_CHANNEL_ID": -1002000000020,
             "PRICE": {
                 "ru": 600.00,
                 "en": 6.00,
@@ -393,18 +414,19 @@ def fetch_bot_settings():
                 "hi": 6.00
             },
             "DESCRIPTION": {
-                "en": "Plan: Standard\nPrice: {price} USD\nDuration: 1 month\n\nAccess to private 18+ channel",
-                "ru": "Тариф: Стандарт\nСтоимость: {price} RUB\nСрок действия: 1 месяц\n\nДоступ к закрытому каналу 18+",
-                "uk": "Тариф: Стандарт\nВартість: {price} USD\nТермін дії: 1 місяць\n\nДоступ до закритого каналу 18+",
-                "tr": "Plan: Standart\nFiyat: {price} USD\nSüre: 1 ay\n\nÖzel 18+ kanala erişim",
-                "hi": "प्लान: स्टैंडर्ड\nकीमत: {price} USD\nअवधि: 1 महीना\n\nनिजी 18+ चैनल तक पहुंच"
-            }
+                "en": "Plan: Standard\nPrice: {price} USD (50% off, was {original_price} USD)\nDuration: 1 month\n\nAccess to private 18+ channel",
+                "ru": "Тариф: Стандарт\nСтоимость: {price} RUB (50% скидка, было {original_price} RUB)\nСрок действия: 1 месяц\n\nДоступ к закрытому каналу 18+",
+                "uk": "Тариф: Стандарт\nВартість: {price} USD (50% знижка, було {original_price} USD)\nТермін дії: 1 місяць\n\nДоступ до закритого каналу 18+",
+                "tr": "Plan: Standart\nFiyat: {price} USD (%50 indirim, eski fiyat {original_price} USD)\nSüre: 1 ay\n\nÖzel 18+ kanala erişim",
+                "hi": "प्लान: स्टैंडर्ड\nकीमत: {price} USD (50% छूट, पहले {original_price} USD)\nअवधि: 1 महीना\n\nनिजी 18+ चैनल तक पहुंच"
+            },
+            "START_PHOTO": "https://via.placeholder.com/800x400.png?text=Welcome+Banner"
         },
         "bot21": {
-            "TOKEN": "7918539989:AAGWxEzcOBHK5SkdDf9VPdtqKYF9Kt_m5Cw",
+            "TOKEN": "PLACEHOLDER_TOKEN_21:AAHxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
             "YOOMONEY_WALLET": "4100118178122985",
             "NOTIFICATION_SECRET": "CoqQlgE3E5cTzyAKY1LSiLU1",
-            "PRIVATE_CHANNEL_ID": -1002894566340,
+            "PRIVATE_CHANNEL_ID": -1002000000021,
             "PRICE": {
                 "ru": 600.00,
                 "en": 6.00,
@@ -413,18 +435,19 @@ def fetch_bot_settings():
                 "hi": 6.00
             },
             "DESCRIPTION": {
-                "en": "Plan: Standard\nPrice: {price} USD\nDuration: 1 month\n\nAccess to private 18+ channel",
-                "ru": "Тариф: Стандарт\nСтоимость: {price} RUB\nСрок действия: 1 месяц\n\nДоступ к закрытому каналу 18+",
-                "uk": "Тариф: Стандарт\nВартість: {price} USD\nТермін дії: 1 місяць\n\nДоступ до закритого каналу 18+",
-                "tr": "Plan: Standart\nFiyat: {price} USD\nSüre: 1 ay\n\nÖzel 18+ kanala erişim",
-                "hi": "प्लान: स्टैंडर्ड\nकीमत: {price} USD\nअवधि: 1 महीना\n\nनिजी 18+ चैनल तक पहुंच"
-            }
+                "en": "Plan: Standard\nPrice: {price} USD (50% off, was {original_price} USD)\nDuration: 1 month\n\nAccess to private 18+ channel",
+                "ru": "Тариф: Стандарт\nСтоимость: {price} RUB (50% скидка, было {original_price} RUB)\nСрок действия: 1 месяц\n\nДоступ к закрытому каналу 18+",
+                "uk": "Тариф: Стандарт\nВартість: {price} USD (50% знижка, було {original_price} USD)\nТермін дії: 1 місяць\n\nДоступ до закритого каналу 18+",
+                "tr": "Plan: Standart\nFiyat: {price} USD (%50 indirim, eski fiyat {original_price} USD)\nSüre: 1 ay\n\nÖzel 18+ kanala erişim",
+                "hi": "प्लान: स्टैंडर्ड\nकीमत: {price} USD (50% छूट, पहले {original_price} USD)\nअवधि: 1 महीना\n\nनिजी 18+ चैनल तक पहुंच"
+            },
+            "START_PHOTO": "https://via.placeholder.com/800x400.png?text=Welcome+Banner"
         },
         "bot22": {
-            "TOKEN": "7981023591:AAE1ihXdexb8NwPwQUZMS0rxmMz0RxbKXkA",
+            "TOKEN": "PLACEHOLDER_TOKEN_22:AAHxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
             "YOOMONEY_WALLET": "4100118178122985",
             "NOTIFICATION_SECRET": "CoqQlgE3E5cTzyAKY1LSiLU1",
-            "PRIVATE_CHANNEL_ID": -1002705712143,
+            "PRIVATE_CHANNEL_ID": -1002000000022,
             "PRICE": {
                 "ru": 600.00,
                 "en": 6.00,
@@ -433,18 +456,19 @@ def fetch_bot_settings():
                 "hi": 6.00
             },
             "DESCRIPTION": {
-                "en": "Plan: Standard\nPrice: {price} USD\nDuration: 1 month\n\nAccess to private 18+ channel",
-                "ru": "Тариф: Стандарт\nСтоимость: {price} RUB\nСрок действия: 1 месяц\n\nДоступ к закрытому каналу 18+",
-                "uk": "Тариф: Стандарт\nВартість: {price} USD\nТермін дії: 1 місяць\n\nДоступ до закритого каналу 18+",
-                "tr": "Plan: Standart\nFiyat: {price} USD\nSüre: 1 ay\n\nÖzel 18+ kanala erişim",
-                "hi": "प्लान: स्टैंडर्ड\nकीमत: {price} USD\nअवधि: 1 महीना\n\nनिजी 18+ चैनल तक पहुंच"
-            }
+                "en": "Plan: Standard\nPrice: {price} USD (50% off, was {original_price} USD)\nDuration: 1 month\n\nAccess to private 18+ channel",
+                "ru": "Тариф: Стандарт\nСтоимость: {price} RUB (50% скидка, было {original_price} RUB)\nСрок действия: 1 месяц\n\nДоступ к закрытому каналу 18+",
+                "uk": "Тариф: Стандарт\nВартість: {price} USD (50% знижка, було {original_price} USD)\nТермін дії: 1 місяць\n\nДоступ до закритого каналу 18+",
+                "tr": "Plan: Standart\nFiyat: {price} USD (%50 indirim, eski fiyat {original_price} USD)\nSüre: 1 ay\n\nÖzel 18+ kanala erişim",
+                "hi": "प्लान: स्टैंडर्ड\nकीमत: {price} USD (50% छूट, पहले {original_price} USD)\nअवधि: 1 महीना\n\nनिजी 18+ चैनल तक पहुंच"
+            },
+            "START_PHOTO": "https://via.placeholder.com/800x400.png?text=Welcome+Banner"
         },
         "bot23": {
-            "TOKEN": "7858411251:AAECVGf7G3gb-20sY7E4rPeWtENB8VCugxY",
+            "TOKEN": "PLACEHOLDER_TOKEN_23:AAHxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
             "YOOMONEY_WALLET": "4100118178122985",
             "NOTIFICATION_SECRET": "CoqQlgE3E5cTzyAKY1LSiLU1",
-            "PRIVATE_CHANNEL_ID": -1002858039096,
+            "PRIVATE_CHANNEL_ID": -1002000000023,
             "PRICE": {
                 "ru": 600.00,
                 "en": 6.00,
@@ -453,18 +477,19 @@ def fetch_bot_settings():
                 "hi": 6.00
             },
             "DESCRIPTION": {
-                "en": "Plan: Standard\nPrice: {price} USD\nDuration: 1 month\n\nAccess to private 18+ channel",
-                "ru": "Тариф: Стандарт\nСтоимость: {price} RUB\nСрок действия: 1 месяц\n\nДоступ к закрытому каналу 18+",
-                "uk": "Тариф: Стандарт\nВартість: {price} USD\nТермін дії: 1 місяць\n\nДоступ до закритого каналу 18+",
-                "tr": "Plan: Standart\nFiyat: {price} USD\nSüre: 1 ay\n\nÖzel 18+ kanala erişim",
-                "hi": "प्लान: स्टैंडर्ड\nकीमत: {price} USD\nअवधि: 1 महीना\n\nनिजी 18+ चैनल तक पहुंच"
-            }
+                "en": "Plan: Standard\nPrice: {price} USD (50% off, was {original_price} USD)\nDuration: 1 month\n\nAccess to private 18+ channel",
+                "ru": "Тариф: Стандарт\nСтоимость: {price} RUB (50% скидка, было {original_price} RUB)\nСрок действия: 1 месяц\n\nДоступ к закрытому каналу 18+",
+                "uk": "Тариф: Стандарт\nВартість: {price} USD (50% знижка, було {original_price} USD)\nТермін дії: 1 місяць\n\nДоступ до закритого каналу 18+",
+                "tr": "Plan: Standart\nFiyat: {price} USD (%50 indirim, eski fiyat {original_price} USD)\nSüre: 1 ay\n\nÖzel 18+ kanala erişim",
+                "hi": "प्लान: स्टैंडर्ड\nकीमत: {price} USD (50% छूट, पहले {original_price} USD)\nअवधि: 1 महीना\n\nनिजी 18+ चैनल तक पहुंच"
+            },
+            "START_PHOTO": "https://via.placeholder.com/800x400.png?text=Welcome+Banner"
         },
         "bot24": {
-            "TOKEN": "7898096458:AAFBmXLXzdR9t3EfnwLn7r7cXf9phmqf3kY",
+            "TOKEN": "PLACEHOLDER_TOKEN_24:AAHxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
             "YOOMONEY_WALLET": "4100118178122985",
             "NOTIFICATION_SECRET": "CoqQlgE3E5cTzyAKY1LSiLU1",
-            "PRIVATE_CHANNEL_ID": -1002869107541,
+            "PRIVATE_CHANNEL_ID": -1002000000024,
             "PRICE": {
                 "ru": 600.00,
                 "en": 6.00,
@@ -473,11 +498,12 @@ def fetch_bot_settings():
                 "hi": 6.00
             },
             "DESCRIPTION": {
-                "en": "Plan: Standard\nPrice: {price} USD\nDuration: 1 month\n\nAccess to private 18+ channel",
-                "ru": "Тариф: Стандарт\nСтоимость: {price} RUB\nСрок действия: 1 месяц\n\nДоступ к закрытому каналу 18+",
-                "uk": "Тариф: Стандарт\nВартість: {price} USD\nТермін дії: 1 місяць\n\nДоступ до закритого каналу 18+",
-                "tr": "Plan: Standart\nFiyat: {price} USD\nSüre: 1 ay\n\nÖzel 18+ kanala erişim",
-                "hi": "प्लान: स्टैंडर्ड\nकीमत: {price} USD\nअवधि: 1 महीना\n\nनिजी 18+ चैनल तक पहुंच"
-            }
-        },
+                "en": "Plan: Standard\nPrice: {price} USD (50% off, was {original_price} USD)\nDuration: 1 month\n\nAccess to private 18+ channel",
+                "ru": "Тариф: Стандарт\nСтоимость: {price} RUB (50% скидка, было {original_price} RUB)\nСрок действия: 1 месяц\n\nДоступ к закрытому каналу 18+",
+                "uk": "Тариф: Стандарт\nВартість: {price} USD (50% знижка, було {original_price} USD)\nТермін дії: 1 місяць\n\nДоступ до закритого каналу 18+",
+                "tr": "Plan: Standart\nFiyat: {price} USD (%50 indirim, eski fiyat {original_price} USD)\nSüre: 1 ay\n\nÖzel 18+ kanala erişim",
+                "hi": "प्लान: स्टैंडर्ड\nकीमत: {price} USD (50% छूट, पहले {original_price} USD)\nअवधि: 1 महीना\n\nनिजी 18+ चैनल तक पहुंच"
+            },
+            "START_PHOTO": "https://via.placeholder.com/800x400.png?text=Welcome+Banner"
+        }
     }
